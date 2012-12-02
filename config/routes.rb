@@ -1,4 +1,7 @@
 Drpicasa::Application.routes.draw do
+  resources :sessions
+
+   root :to => 'sessions#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
