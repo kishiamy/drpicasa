@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
 
   def self.create_with_omniauth(auth)
     create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
+      user.provider = auth["provider"] unless auth["provider"].blank?
+      user.uid = auth["uid"] unless auth["uid"].blank?
     end
   end
 end
