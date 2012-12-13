@@ -1,7 +1,11 @@
 Drpicasa::Application.routes.draw do
   resources :sessions
-
-   root :to => 'sessions#create'
+  
+  match "/auth/google_oauth2", to: "sessions#new", :as => "login"
+  match "/auth/failure", to: "sessions#failure"
+  match "/logout", to: "sessions#destroy", :as => "logout"
+  
+  root :to => 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
