@@ -2,6 +2,7 @@ Drpicasa::Application.routes.draw do
   resources :sessions
   
   match "/auth/google_oauth2", to: "sessions#new", :as => "login"
+  match "/auth/google_oauth2callback"
   match "/auth/failure", to: "sessions#failure"
   match "/logout", to: "sessions#destroy", :as => "logout"
   
