@@ -1,8 +1,8 @@
 Drpicasa::Application.routes.draw do
   
-  match "/auth/google_oauth2/callback", to: "sessions#create"
+  match "/auth/google_oauth2/callback", to: "sessions#albums"
   
-  root :to => 'sessions#new'
+  root :to => 'sessions#login'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

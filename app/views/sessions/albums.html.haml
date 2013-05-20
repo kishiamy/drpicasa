@@ -1,0 +1,6 @@
+%h1 Picasa
+%ul
+- @albums.each do |album|
+  %li
+    =image_tag album[:thumb]
+    =album[:title]
