@@ -1,6 +1,9 @@
 %h1 Picasa
-%ul
-- @albums.each do |album|
-  %li
-    =album[:title]
-    =image_tag album[:thumb]
+- if @albums.present?
+  %ul
+  - @albums.each do |album|
+    %li
+      =album[:title]
+      =image_tag album[:thumb]
+- else
+  Albums empty
