@@ -1,11 +1,6 @@
 %h1 Picasa
-= Nokogiri::XML(RestClient.get("https://picasaweb.google.com/data/feed/api/user/default", 
-                  headers = { Gdata: 2,
-                              Authorization: "OAuth #{request.env["omniauth.auth"].credentials.token}" })).xpath('//xmlns:entry').each do |album|
-                              =album[:title]
-                              =image_tag album[:thumb]
-/ %ul
-/ - @albums.each do |album|
-/   %li
-/     =album[:title]
-/     =image_tag album[:thumb]
+%ul
+- @albums.each do |album|
+  %li
+    =album[:title]
+    =image_tag album[:thumb]
