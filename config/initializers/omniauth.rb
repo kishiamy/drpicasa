@@ -5,4 +5,3 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     :approval_prompt => 'auto'
   }
 end
-

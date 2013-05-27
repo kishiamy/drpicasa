@@ -35,4 +35,5 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+  token = "ya29.AEHS6ZSHdSPZISaM6_GoUnDVCrVx19heL3h2i_4aSIrK"
 end
