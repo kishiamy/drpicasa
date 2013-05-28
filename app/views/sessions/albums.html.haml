@@ -3,8 +3,9 @@
   %ul
   - @albums.each do |album|
     %li
-      =album[:title]
+      = album[:title]
       %br/
-      =image_tag album[:thumb]
+      = image_tag album[:thumb]
+      = link_to "Show photos", show_photos_path 
 - else
   Albums empty
