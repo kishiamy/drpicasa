@@ -9,13 +9,11 @@ class SessionsController < ApplicationController
     albums_xml = Nokogiri::XML(request_xml) do |config|
       config.strict.nonet
     end
-    #albums_xml.remove_namespaces!
     
     @albums = albums_xml.xpath("//xmlns:entry").map do |entry|
       {
-        :thumb => entry.xpath('.//media:thumbnail').attr("url"),
-        :album_type => entry.xpath('.//gphoto:albumType').inner_text,
-        :title => entry.xpath('.//media:title').inner_text
+         :title => entry.xpath('.//media:title').inner_text,
+        :thumb => entry.xpath('.//media:thumbnail').attr("url")  
       }
     end
   end
