@@ -1,8 +1,9 @@
 %h1 Photos
+
 - if @photos.present?
   %ul
-  - @photos.each do |photo|
-    %li
-      = image_tag photo[:image]
+    - @photos.each do |photo|
+      %li
+        = image_tag photo[:thumb]
 - else
   Sorry, this album is empty
