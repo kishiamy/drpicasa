@@ -2,8 +2,9 @@
 - if @albums.present?
   - @albums.each do |album|
     .rotation
-      = image_tag album[:thumb]
-      %br/
-      = link_to album[:title], show_photos_path 
+      .polaroid 
+        = image_tag album[:thumb]
+        %br/
+        = link_to album[:title], show_photos_path 
 - else
   Albums empty
