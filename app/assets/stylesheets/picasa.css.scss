@@ -53,6 +53,13 @@ body{
   }
 }
 
+.rotation:hover {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  position: relative;
+  z-index: 5;  
+}
+
 .rotation {
   display:inline-block;
   margin: 20px;
