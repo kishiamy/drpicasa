@@ -1,11 +1,8 @@
 %h1 Picasa album
 - if @albums.present?
-  %ul
   - @albums.each do |album|
-    %li
-      = album[:title]
-      %br/
-      = image_tag album[:thumb]
-      = link_to "Show photos", show_photos_path 
+    = album[:title]
+    = image_tag album[:thumb]
+    = link_to "Show", show_photos_path 
 - else
   Albums empty
