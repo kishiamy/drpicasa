@@ -46,19 +46,21 @@ body{
   a:link {
     text-decoration: none; 
   } 
-  .rotation {
-    display:inline-block;
-    margin: 20px;
-    -moz-transform:rotate(-5deg);
-    -webkit-transform:rotate(-5deg);
-    -o-transform:rotate(-5deg);
-    -ms-transform:rotate(-5deg);
-  }   
+    
   a:visited {
     color: black;
     text-decoration: none;   
   }
 }
+
+.rotation {
+  display:inline-block;
+  margin: 20px;
+  -moz-transform:rotate(-5deg);
+  -webkit-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+} 
   
 .empty_album {
   display: inline-block;

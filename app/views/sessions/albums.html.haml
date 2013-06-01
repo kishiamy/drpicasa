@@ -1,10 +1,11 @@
 %h1 Picasa album
 - if @albums.present?
   - @albums.each do |album|
-    .polaroid.rotation
-      = image_tag album[:thumb]
-      %br/
-      = link_to album[:title], show_photos_path 
+    .rotation
+      .polaroid
+        = image_tag album[:thumb]
+        %br/
+        = link_to album[:title], show_photos_path 
 - else
   .polaroid
     .empty_album
