@@ -3,9 +3,9 @@
   - @albums.each do |album|
     .rotation
       .polaroid
-        = image_tag album[:thumb]
+        = link_to (image_tag album[:thumb]), show_photos_path 
         %br/
-        = link_to album[:title], show_photos_path 
+        = album[:title]
 - else
   .polaroid 
     .empty_album
