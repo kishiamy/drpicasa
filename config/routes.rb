@@ -1,6 +1,9 @@
 Drpicasa::Application.routes.draw do
   
-  match "/auth/google_oauth2/callback", to: "sessions#albums"
+  get "albums/index"
+  get "albums/show"
+
+  match "/auth/google_oauth2/callback", to: "albums#index"
   get "sessions/photos", to:"sessions#photos", :as => :show_photos
   
   root :to => 'sessions#login'

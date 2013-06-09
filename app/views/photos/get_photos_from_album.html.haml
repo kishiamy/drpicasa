@@ -1,0 +1,9 @@
+%h1 Photos
+- if @photos.present?
+  - @photos.each do |photo|
+    = image_tag photo[:thumb]
+- else  
+  .polaroid 
+    .empty
+    %br/
+    No photo
