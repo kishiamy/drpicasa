@@ -1,14 +1,9 @@
 %h1 Photos
-=@a_xml.present?
-
-/ =@request_xml
-/ %br/
-/ - if @photos.present?
-/   - @photos.each do |photo|
-/     = image_tag photo[:thumb]
-/ - else
-/   Sorry, this album is empty
-.polaroid 
-  .empty
-  %br/
-  No photo
+- if @photos.present?
+  - @photos.each do |photo|
+    = image_tag photo[:thumb]
+- else  
+  .polaroid 
+    .empty
+    %br/
+    No photo
