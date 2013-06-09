@@ -1,7 +1,6 @@
 Drpicasa::Application.routes.draw do
   
   get "albums/index"
-
   get "albums/show"
 
   match "/auth/google_oauth2/callback", to: "albums#index"
